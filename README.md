@@ -8,12 +8,12 @@
 * [Dockerfile](#Dockerfile)
 * [学习资源](#resource)
 
-## <a name="#install"></a>安装
+## <a name="#install">安装</a>
 官网的安装包下载太慢了，用的 [DaoCloud](https://www.daocloud.io/) 的镜像，下载点[这里](http://get.daocloud.io/)。
 
-Docker 镜像加速，点[这里](http://guide.daocloud.io/dcs/docker-9153151.html)
+Docker 镜像加速，点[这里](http://guide.daocloud.io/dcs/docker-9153151.html)。
 
-## <a name="#term"></a>基础概念
+## <a name="#term">基础概念</a>
 ### 镜像(Image)
 Docker 镜像是一个特殊的文件系统，除了提供容器运行时所需的程序、库、资源、配置等文件外，还包含了一些为运行时准备的一些配置参数（如匿名卷、环境变量、用户等）。镜像不包含任何动态数据，其内容在构建之后也不会被改变。
 
@@ -168,7 +168,7 @@ ENTRYPOINT ["npm", "run", "build"]
 更多见 [这里](http://guide.daocloud.io/dcs/dockerfile-9153584.html)
 
 
-## <a name="#resoure">学习资源</a>
+## <a name="#resource">学习资源</a>
 * [《Docker技术入门与实战》](https://item.jd.com/12121728.html) [在线阅读地址](https://www.gitbook.com/book/yeasy/docker_practice/details)
 * [《循序渐进学 Docker》](https://item.jd.com/12015655.html)
 * Flux7的Docker系列部分中文翻译：
