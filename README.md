@@ -252,6 +252,9 @@ docker build -t 名称[:版本] 路径|url
 
 主要是编写文件 `docker-compose.yml`。
 
+## 一些库
+* [MySQL](http://hub.daocloud.io/repos/fa51c1d6-9dc2-49d9-91ac-4bbfc24a1bda)
+
 ## <a name="#resource">学习资源</a>
 * [只要一小时，零基础入门Docker]
 * [《Docker技术入门与实战》](https://item.jd.com/12121728.html) [在线阅读地址](https://www.gitbook.com/book/yeasy/docker_practice/details)
