@@ -1,12 +1,19 @@
 # docker 笔记
 > Docker是一个新的容器化的技术，它轻巧，且易移植，号称“build once, configure once and run anywhere。
 
-## 安装
+## 目录
+* [安装](#install)
+* [基础概念](#term)
+* [常用命令](#command)
+* [Dockerfile](#Dockerfile)
+* [学习资源](#resource)
+
+## <a name="#install"></a>安装
 官网的安装包下载太慢了，用的 [DaoCloud](https://www.daocloud.io/) 的镜像，下载点[这里](http://get.daocloud.io/)。
 
 Docker 镜像加速，点[这里](http://guide.daocloud.io/dcs/docker-9153151.html)
 
-## 基础概念
+## <a name="#term"></a>基础概念
 ### 镜像(Image)
 Docker 镜像是一个特殊的文件系统，除了提供容器运行时所需的程序、库、资源、配置等文件外，还包含了一些为运行时准备的一些配置参数（如匿名卷、环境变量、用户等）。镜像不包含任何动态数据，其内容在构建之后也不会被改变。
 
@@ -18,7 +25,7 @@ Docker 镜像是一个特殊的文件系统，除了提供容器运行时所需�
 ### 容器(Container)
 以镜像为模板启动的应用叫容器。镜像是静态的定义，容器是镜像运行时的实体。
 
-## 常用命令
+## <a name="#command">常用命令</a>
 ### 基本信息
 查看版本
 ```
@@ -93,7 +100,7 @@ docker pull 镜像名
 docker images
 ```
 
-## Dockerfile
+## <a name="#Dockerfile">Dockerfile</a>
 Docker 使用 Dockerfile 来描述构建步骤。
 
 ### 常见命令
@@ -135,9 +142,33 @@ COPY <src>... <dest>，源不可以是URL
 COPY local_files /temp 复制当前目录下文件到容器/temp目录
 ```
 
+#### 设置工作目录
+```
+WORKDIR 路径
+```
+
+#### 运行命令
+```
+RUN 命令
+```
+
+#### 示例
+```
+FROM node:8-alpine
+
+RUN mkdir -p /app
+COPY . /app # 将当前目录下的所有内容拷贝到容器的 /app 下
+WORKDIR /app
+RUN npm install .
+
+ENTRYPOINT ["npm", "run", "build"]
+```
+
+
 更多见 [这里](http://guide.daocloud.io/dcs/dockerfile-9153584.html)
 
-## 学习资源
+
+## <a name="#resoure">学习资源</a>
 * [《Docker技术入门与实战》](https://item.jd.com/12121728.html) [在线阅读地址](https://www.gitbook.com/book/yeasy/docker_practice/details)
 * [《循序渐进学 Docker》](https://item.jd.com/12015655.html)
 * Flux7的Docker系列部分中文翻译：
