@@ -256,7 +256,8 @@ docker build -t 名称[:版本] 路径|url
 * [MySQL](http://hub.daocloud.io/repos/fa51c1d6-9dc2-49d9-91ac-4bbfc24a1bda)
 
 ## <a name="#resource">学习资源</a>
-* [只要一小时，零基础入门Docker]
+* [只要一小时，零基础入门Docker](https://zhuanlan.zhihu.com/p/23599229)
+* [Docker 中文文档](http://docker-doc.readthedocs.io/zh_CN/latest/use/basics.html)
 * [《Docker技术入门与实战》](https://item.jd.com/12121728.html) [在线阅读地址](https://www.gitbook.com/book/yeasy/docker_practice/details)
 * [《循序渐进学 Docker》](https://item.jd.com/12015655.html)
 * Flux7的Docker系列部分中文翻译：
